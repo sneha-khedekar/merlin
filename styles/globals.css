@@ -8,45 +8,58 @@
 }
 
 :root {
-  --primary-color: #005AA6!important;
-  --font-montserrat: 'Montserrat', sans-serif;
-    font-size: 14px;
+    --primary-color: #004D9E !important;
+    --font-poppins: 'poppins', sans-serif;
+    --font-size: calc(16px + 0.25vw);
+
 
 }
-.text-primary{
-  color: var(--primary-color)!important;
-}
-.bgprimary{
-  background-color: var(--primary-color)!important;
+
+.text-primary {
+    color: var(--primary-color) !important;
 }
 
+.bgprimary {
+    background-color: var(--primary-color) !important;
+}
+
+.bgsecondary {
+    background-color: #F7F2EA;
+}
 
 /* Basic typography */
 body {
-  font-family: 'Montserrat', sans-serif!important; /* Use Montserrat font */
-    font-size: 13px;
+    font-family: var(--font-poppins);
+    font-size: var(--font-size);
+    --spacing-unit: 1rem;
     line-height: 1.5;
-    color: #333;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    font-weight: 300 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
-    font-weight: normal;
+
 }
 
 p {
-    margin-bottom: 1em;
+    margin-bottom: var(--spacing-unit);
 }
 
 a {
     color: #007bff;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
@@ -55,7 +68,7 @@ a:hover, a:focus {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 var(--spacing-unit);
 }
 
 .row {
@@ -65,11 +78,14 @@ a:hover, a:focus {
 
 .col {
     flex: 1;
-    padding: 15px;
+    padding: var(--spacing-unit);
 }
 
 /* Form elements */
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -80,47 +96,133 @@ input, textarea, select, button {
 }
 
 button {
-    color: #fff!important;
+    color: #fff !important;
     border: none;
     cursor: pointer;
 }
 
-button:hover, button:focus {
-    background-color: #0056b3;
-}
+
 
 /* Utility classes */
 .text-center {
     text-align: center;
 }
 
-.pt-1 { padding-top: 0.25rem!important; }
-.pt-2 { padding-top: 0.5rem!important; }
-.pt-3 { padding-top: 1rem!important; }
-.pt-4 { padding-top: 1.5rem!important; }
-.pt-5 { padding-top: 3rem!important; }
-.pt-8 { padding-top: 6rem!important; }    
+.plr-2 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.plr-3 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.plr-4 {
+    padding-left: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.plr-5 {
+    padding-left: 0 !important;
+    padding-right: 3rem !important;
+}
 
 
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 1.5rem; }
-.mt-5 { margin-top: 3rem; }
 
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 1rem; }
-.mb-4 { margin-bottom: 1.5rem; }
-.mb-5 { margin-bottom: 3rem; }
+.pt-1 {
+    padding-top: 0.25rem !important;
+}
 
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-3 { padding: 1rem; }
-.p-4 { padding: 1.5rem; }
-.p-5 { padding: 3rem; }
+.pt-2 {
+    padding-top: 0.5rem !important;
+}
 
-.ml-5 { margin-left: 3rem; }
+.pt-3 {
+    padding-top: 1rem !important;
+}
+
+.pt-4 {
+    padding-top: 1.5rem !important;
+}
+
+.pt-5 {
+    padding-top: 3rem !important;
+}
+
+.pt-8 {
+    padding-top: 6rem !important;
+}
+
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.pb-6 {
+    padding-bottom: 7rem;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+.ml-5 {
+    margin-left: 3rem;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .col {
@@ -128,11 +230,217 @@ button:hover, button:focus {
     }
 }
 
+/* heading */
+.heading {
+    font-size: calc(1rem + 1vw);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+    font-weight: 300;
+}
+
+.subheading {
+    font-size: calc(0.5rem + 0.5vw);
+    margin-bottom: var(--spacing-unit);
+    color: var(--primary-color);
+}
+
+.background-light {
+    background-color: #F7F2EA;
+    padding: calc(var(--spacing-unit) * 4);
+}
+
+/* heading end */
+
+/* button */
+
+button.btn.explore-btn {
+    padding: 0.5rem 2rem;
+    font-size: calc(0.8rem + 0.5vw);
+    font-weight: 200;
+}
+
+button.story-button {
+    padding: 0.5rem 5rem;
+    font-size: calc(0.8rem + 0.5vw);
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* button end  */
+/* slider button */
+span.swiper-pagination-bullet {
+    border-radius: 0px !important;
+    width: 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+
+/* slider button end */
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+/* ....Nav bar... */
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* slidebar */
+.offcanvas-backdrop.show {
+    opacity: 0 !important;
+}
+
+.offcanvas {
+    color: #ffffff !important;
+    background-color: #24669aa3 !important;
+}
+
+.offcanvas-body {
+    padding: 4rem !important;
+}
+
+.offcanvas-body a {
+    font-weight: 400 !important;
+}
+
+/* slidebar end */
+/* ...Nav bar... end */
+
+/* Home slider  */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 950px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide-text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+
+/* Home slider end */
+
+/* Add more Life */
+.addmorelife {
+    background-color: #F7F2EA;
+    padding-top: 200px;
+}
+
+.addmorelife-text {
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+}
+
+.addmorelife .container {
+    margin-top: -400px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.addtolife-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: calc(1rem + 0.2vw);
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Add more LIfe End */
+
+/* testimonaials */
+
+.testimonial-img {
+    position: relative;
+    margin: 0 1%;
+}
+
+.testimonial-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #24669ae3;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+}
+
+.testimonial-img:hover .testimonial-img-overlay {
+    height: 100%;
+}
+
+.testimonial p {
+    font-size: calc(1rem + 0.2vw);
+}
+
+/* testimonaials end */
+
+
+/* RealEstateUsp */
+.skyline h2 {
+    font-size: calc(15px + (55 - 20) * (100vw - 320px) / (1920 - 320));
+    font-weight: 200;
+    color: var(--primary-color);
+}
+
+/* RealEstateUsp end */
+
 /* news section */
 
-.news-section{
-  
+.news-section {
     background-color: #F7F2EA;
+}
+
+.news-section img {
+    border: 30px solid #004D9E;
+}
+
+.news-section p {
+    font-size: 18px;
+}
+
+.news-section .btn {
+    color: var(--primary-color) !important;
+    font-size: calc(15px + (25 - 20) * (100vw - 320px) / (1920 - 320));
 }
 
 /* news section end */
@@ -140,55 +448,90 @@ button:hover, button:focus {
 
 
 /* explore more button */
-.explore-more button{
-    padding: 0.5rem 5rem;
+.explore-more button {
+    padding: 0.5rem 7rem;
     font-size: 1.5rem;
-    background-color: #fff!important;
-    color: var(--primary-color)!important;
+    background-color: #fff !important;
+    color: var(--primary-color) !important;
     border: 1px solid var(--primary-color);
 }
 
 /* explore more button end */
 
 
+/* featureproject-slider */
+
+.featureproject-slider {
+    border-bottom: 22px solid #30935D;
+}
+
+.mb-50 {
+    margin-bottom: 5rem;
+}
+
+.featureproject-slider .btn {
+    background-color: #fff !important;
+    color: var(--primary-color) !important;
+    padding: 0.4rem 2rem;
+    font-size: calc(0.5rem + 0.5vw);
+    border-radius: 0%;
+    height: fit-content;
+}
+
+
+.featureproject-slider span {
+    border-right: 1px solid white;
+    padding-right: 20px;
+}
+
+/* featureproject-slider end */
+
 /* .....Footer........ */
 
 /* connect with us */
 
-.connect-with-us{
+.connect-with-us {
     margin-bottom: -3.3rem;
-    background-color: #000;
+    background-color: #5A5A5A;
 }
-.connect-with-us .form-control{
-    width: 30%!important;
+
+.connect-with-us .form-control {
+    width: 30% !important;
 }
+
 .connect-with-us input {
-    background-color: black!important;
-    color: white!important;
-    border: 1px solid white!important;
+    background-color: #5A5A5A !important;
+    color: white !important;
+    border: 1px solid white !important;
 }
+
 .connect-with-us input::placeholder {
-    color: white!important;
+    color: white !important;
 }
 
+.connect-with-us h4 {
+    font-size: 25px;
+}
 
+footer h6 {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+footer p {
+    font-size: 15px;
+}
 
 /* .....Footer End........ */
 
 
-.overlay {
-    background-color: rgba(0, 0, 255, 0.75); /* Adjust opacity and color as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Adjust transition timing as needed */
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .testimonialOverlay:hover {
-    opacity: 1;
-  }
-  
-  
+
+/* ---------------Responsive-------------- */
+@media (max-width: 768px) {
+    .plr-5 {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+}
+
+/* ----------------Responsive End----*/

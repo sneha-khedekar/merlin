@@ -1,24 +1,45 @@
-import React, { useRef, useState } from 'react';
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
+import NavigationBar from "@/layout/Header";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
+// Import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// Import custom CSS
 
 export default function HeroSlider() {
+  const slides = [
+    {
+      image: "/image/hero/banner1.png",
+    },
+    {
+      image: "/image/hero/02.png",
+    },
+    {
+      image: "/image/hero/03.png",
+    },
+    {
+      image: "/image/hero/04.png",
+    },
+    {
+      image: "/image/hero/05.png",
+    },
+  ];
+
   return (
     <>
+      <NavigationBar />
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -26,12 +47,22 @@ export default function HeroSlider() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="hero-slider"
       >
-        <SwiperSlide><img src="https://placehold.co/19200x300" alt="slide" /></SwiperSlide>
-        <SwiperSlide><img src="https://placehold.co/19200x300" alt="slide" /></SwiperSlide>
-        <SwiperSlide><img src="https://placehold.co/19200x300" alt="slide" /></SwiperSlide>
-       
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide-content hero">
+              <div
+                className="background"
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

@@ -1,10 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Button = ({ color, text }) => {
+const Button = ({ color, text, project }) => {
   return (
-    <button className={`btn ${color} text-white py-2 px-4 rounded-0`}>
-      {text}
+    <button className={`btn explore-btn ${color} text-white rounded-0`}>
+      <span className="font-light">
+        {" "}
+        <b>{text}</b>&nbsp;
+        {project}
+      </span>
     </button>
   );
 };

@@ -1,0 +1,20 @@
+.customPrevBtn,
+.customNextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.customPrevBtn {
+    left: 10px;
+}
+
+.customNextBtn {
+    right: 10px;
+}

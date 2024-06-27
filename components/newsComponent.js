@@ -1,33 +1,33 @@
 // components/NewsComponent.js
-import React from 'react';
-import SwiperSlider from '../components/swiperSlider';
+import React from "react";
+import SwiperSlider from "../components/swiperSlider";
 
 const NewsComponent = () => {
   const articleData = [
     {
-      title: 'Benefits of living in an Integrated...',
+      title: "Heading One",
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://placehold.co/600x400',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image: "/image/news-media/news1.png",
     },
     {
-      title: 'Investment in Real Estate...',
+      title: "Heading Two",
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://placehold.co/600x400',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image: "/image/news-media/news1.png",
     },
     {
-      title: '5 Strategies That Real Estate...',
+      title: "Heading Three",
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'https://placehold.co/600x400',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image: "/image/news-media/news1.png",
     },
   ];
 
   return (
     <section className="news-section py-4">
       <div className="container mt-4">
-        <h2 className="text-center text-2xl font-semibold mb-4">News & Media</h2>
+        <h2 className="text-center heading">News & Media</h2>
         <SwiperSlider articles={articleData} />
       </div>
     </section>

@@ -11,6 +11,7 @@
     --primary-color: #004D9E !important;
     --font-poppins: 'poppins', sans-serif;
     --font-size: calc(16px + 0.25vw);
+    --swiper-navigation-size: 22px !important;
 
 
 }
@@ -101,7 +102,27 @@ button {
     cursor: pointer;
 }
 
+/* /ST Images/ */
+.image-container {
+    width: auto;
+    position: relative;
+}
 
+.image-container>span {
+    position: unset !important;
+
+}
+
+.image-container.d-inblock>span {
+    position: unset !important;
+    display: inline-block !important;
+}
+
+.image {
+    object-fit: contain;
+    position: relative !important;
+    height: unset !important;
+}
 
 /* Utility classes */
 .text-center {
@@ -232,14 +253,15 @@ button {
 
 /* heading */
 .heading {
-    font-size: calc(1rem + 1vw);
+
+    font-size: calc(25px + (25 - 20) * (100vw - 320px) / (1920 - 320));
     color: var(--primary-color);
     margin-bottom: var(--spacing-unit);
     font-weight: 300;
 }
 
 .subheading {
-    font-size: calc(0.5rem + 0.5vw);
+    font-size: calc(15px + (25 - 20) * (100vw - 320px) / (1920 - 320));
     margin-bottom: var(--spacing-unit);
     color: var(--primary-color);
 }
@@ -257,6 +279,7 @@ button.btn.explore-btn {
     padding: 0.5rem 2rem;
     font-size: calc(0.8rem + 0.5vw);
     font-weight: 200;
+    width: 27rem !important;
 }
 
 button.story-button {
@@ -294,6 +317,10 @@ span.swiper-pagination-bullet {
     margin-left: auto;
 }
 
+.hamburger {
+    margin-left: 1rem;
+}
+
 /* slidebar */
 .offcanvas-backdrop.show {
     opacity: 0 !important;
@@ -311,6 +338,7 @@ span.swiper-pagination-bullet {
 .offcanvas-body a {
     font-weight: 400 !important;
 }
+
 
 /* slidebar end */
 /* ...Nav bar... end */
@@ -352,6 +380,15 @@ span.swiper-pagination-bullet {
     width: 100%;
 }
 
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important;
+    font-size: 20px !important;
+
+}
+
 /* Home slider end */
 
 /* Add more Life */
@@ -382,6 +419,7 @@ span.swiper-pagination-bullet {
     font-size: calc(1rem + 0.2vw);
     font-weight: 400;
     color: #fff;
+    z-index: 1;
 }
 
 /* Add more LIfe End */
@@ -412,15 +450,52 @@ span.swiper-pagination-bullet {
     font-size: calc(1rem + 0.2vw);
 }
 
+.testimonial {
+    position: relative;
+}
+
+.testimonial .swiper {
+    position: unset;
+}
+
+.testimonial .swiper-button-next {
+    right: 15rem;
+    color: gray !important;
+}
+
+.testimonial.swiper-button-prev {
+    color: gray !important;
+    left: 15rem;
+}
+
 /* testimonaials end */
 
 
 /* RealEstateUsp */
 .skyline h2 {
-    font-size: calc(15px + (55 - 20) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(22px + (55 - 20) * (100vw - 320px) / (1920 - 320));
     font-weight: 200;
     color: var(--primary-color);
 }
+
+.skyline {
+    position: relative;
+}
+
+.skyline .swiper {
+    position: unset;
+}
+
+.skyline .swiper-button-prev {
+    left: 0px;
+    color: #686868 !important;
+}
+
+.skyline .swiper-button-next {
+    left: 36rem;
+    color: #686868 !important;
+}
+
 
 /* RealEstateUsp end */
 
@@ -428,6 +503,7 @@ span.swiper-pagination-bullet {
 
 .news-section {
     background-color: #F7F2EA;
+    position: relative;
 }
 
 .news-section img {
@@ -441,6 +517,20 @@ span.swiper-pagination-bullet {
 .news-section .btn {
     color: var(--primary-color) !important;
     font-size: calc(15px + (25 - 20) * (100vw - 320px) / (1920 - 320));
+}
+
+.news-section .swiper {
+    position: unset;
+}
+
+.news-section .swiper-button-prev {
+    left: 14rem !important;
+    color: #686868 !important;
+}
+
+.news-section .swiper-button-next {
+    right: 14rem !important;
+    color: #686868 !important;
 }
 
 /* news section end */
@@ -513,6 +603,11 @@ span.swiper-pagination-bullet {
     font-size: 25px;
 }
 
+.connect-with-us {
+    display: flex !important;
+    padding: 2rem;
+}
+
 footer h6 {
     font-size: 1.3rem;
     font-weight: 300;
@@ -522,16 +617,254 @@ footer p {
     font-size: 15px;
 }
 
+
+
 /* .....Footer End........ */
 
 
 
-/* ---------------Responsive-------------- */
-@media (max-width: 768px) {
+
+
+/*==========  Mobile   ==========*/
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
     .plr-5 {
         padding-left: 0rem !important;
         padding-right: 0rem !important;
     }
+
+    .slide-content {
+        height: 36vh;
+    }
+
+    .addmorelife-text {
+        padding-top: 2rem;
+        padding-bottom: 13rem;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .py-5 {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .align-items-start {
+        align-items: center !important;
+    }
+
+    body {
+        --spacing-unit: 0.5em;
+    }
+
+    button.btn.explore-btn {
+
+        margin-bottom: 1rem;
+    }
+
+    img.logo {
+        width: 7rem !important;
+    }
+
+    .mb-50 {
+        margin-bottom: 1rem;
+    }
+
+    .hamburger {
+        margin-left: -5rem !important;
+    }
+
+    .skyline .swiper-button-next {
+        left: 23.5rem;
+        top: 25%;
+    }
+
+    .skyline .swiper-button-prev {
+        left: 1rem !important;
+        top: 25%;
+    }
+
+    .news-section .swiper-button-next {
+        right: 0.5rem !important;
+        top: 16rem;
+    }
+
+    .news-section .swiper-button-prev {
+        top: 16rem;
+        left: 0.5rem !important;
+    }
+
+    .connect-with-us .form-control {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    .connect-with-us {
+        display: block !important;
+    }
+
+    .offcanvas {
+        color: #ffffff !important;
+        background-color: #24669ae8 !important;
+    }
+
+    .news-section p {
+        font-size: 15px;
+    }
+
+    .testimonial .swiper-button-next {
+        display: none;
+    }
+
+    .testimonial .swiper-button-prev {
+        display: none;
+    }
+
+    br {
+        display: none;
+    }
+
 }
 
-/* ----------------Responsive End----*/
+@media (max-width: 390px) {
+    .skyline .swiper-button-next {
+        left: 20.5rem;
+        top: 25%;
+    }
+}
+
+@media (min-width: 430px) {
+    .skyline .swiper-button-next {
+        left: 24.5rem;
+        top: 25%;
+    }
+
+    .testimonial .swiper-button-next {
+        display: none;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .slide-content {
+        height: 40vh;
+    }
+
+    img.logo {
+        width: 7rem !important;
+    }
+
+    .addmorelife-text {
+        padding-top: 2rem;
+        padding-bottom: 12rem;
+    }
+
+    .plr-5 {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .connect-with-us .form-control {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    .skyline .swiper-button-next {
+        left: 21.5rem;
+        top: 25%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .slide-content {
+        height: 90vh;
+    }
+
+    .addmorelife-text {
+        padding-top: 2rem;
+        padding-bottom: 15rem;
+    }
+
+    .skyline .swiper-button-next {
+        left: 21.5rem;
+        top: 25%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1000px) {
+    .slide-content {
+        height: 100vh;
+    }
+
+    .hamburger {
+        margin-left: 1rem !important;
+    }
+
+    .connect-with-us .form-control {
+        width: 30% !important;
+        margin-bottom: 0rem;
+    }
+
+    .connect-with-us {
+        display: flex !important;
+    }
+
+    .skyline .swiper-button-next {
+        left: 36rem;
+        top: 50%;
+    }
+
+    .skyline .swiper-button-prev {
+        left: 0px;
+        top: 50%;
+    }
+
+    .news-section .swiper-button-prev {
+        left: 14rem !important;
+        top: 50%;
+    }
+
+    .news-section .swiper-button-next {
+        right: 14rem !important;
+        top: 50%;
+    }
+
+    .mb-50 {
+        margin-bottom: 5rem;
+    }
+
+    .testimonial .swiper-button-next {
+        display: block;
+    }
+
+    .testimonial .swiper-button-prev {
+        display: block;
+        color: black !important;
+        left: 15rem;
+    }
+
+    .news-section p {
+        font-size: 18px;
+    }
+
+    br {
+        display: block;
+    }
+}
+
+/* ----------------Responsive End----------*/

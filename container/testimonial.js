@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { motion } from "framer-motion";
+import { zoomIn } from "@/components/motion";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -45,7 +47,20 @@ const Testimonials = () => {
         <h2 className="text-center heading">Testimonials</h2>
         <Swiper
           className="swiper-container"
-          slidesPerView={3}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
           spaceBetween={5}
           navigation={{
             nextEl: ".swiper-button-next",
@@ -57,20 +72,27 @@ const Testimonials = () => {
             <SwiperSlide key={index} className="swiper-slide">
               <div className="row justify-content-center align-items-center position-relative">
                 <div className="col-md-12 mb-4 d-flex justify-content-center position-relative">
-                  <div className="testimonial-img">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="img-fluid border border-primary"
-                    />
-                    <div className="testimonial-img-overlay">
-                      <div className="text-white p-5 pt-5">
-                        <h3 className="font-bold">{testimonial.name}</h3>
-                        <p className="text-sm">{testimonial.text}</p>
-                        <h5 className="text-sm">{testimonial.link}</h5>
+                  <motion.div
+                    variants={zoomIn("left", 0.5)}
+                    initial={"hidden"}
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.1 }}
+                  >
+                    <div className="testimonial-img">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="img-fluid border border-primary"
+                      />
+                      <div className="testimonial-img-overlay">
+                        <div className="text-white p-5 pt-5">
+                          <h3 className="font-bold">{testimonial.name}</h3>
+                          <p className="text-sm">{testimonial.text}</p>
+                          <h5 className="text-sm">{testimonial.link}</h5>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </SwiperSlide>

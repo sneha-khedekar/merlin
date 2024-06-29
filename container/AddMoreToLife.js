@@ -1,5 +1,7 @@
 import React from "react";
-
+import { motion } from "framer-motion"; // Import motion from framer-motion
+import { zoomIn } from "@/components/motion";
+import Image from "next/image";
 const AddMoreToLife = () => {
   return (
     <>
@@ -51,12 +53,29 @@ const AddMoreToLife = () => {
 };
 
 const Card = ({ imageSrc, alt, bgColor, text }) => {
+  // console.log(imageSrc, "imageSrc");
   return (
-    <div className="card text-center border-0 position-relative">
-      <div className="addtolife-overlay d-flex align-items-center justify-content-center">
-        <p className="card-text m-0">{text}</p>
-      </div>
-      <img src={imageSrc} alt={alt} className="card-img-top" />
+    <div>
+      <motion.div
+        variants={zoomIn("left", 0.3)}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <div className="card text-center border-0 position-relative">
+          <div className="addtolife-overlay d-flex align-items-center justify-content-center">
+            <p className="card-text m-0">{text}</p>
+          </div>
+          <span className="image-container">
+            <Image
+              layout="fill"
+              src={imageSrc}
+              alt={alt}
+              className="image card-img-top img-fluid"
+            />
+          </span>
+        </div>
+      </motion.div>
     </div>
   );
 };

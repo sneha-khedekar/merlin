@@ -26,6 +26,7 @@ const home = () => {
       </div>
       <RealEstateUsp />
       <FeatureProject />
+
       <div className="background-light">
         <div className="container">
           <div className="row">

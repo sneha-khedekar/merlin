@@ -17,7 +17,7 @@ const footer = () => {
       <div class="container">
         <div class="row">
           <div className="col-md-12">
-            <div class="connect-with-us p-5 d-flex justify-content-center align-items-center gap-3">
+            <div class="connect-with-us p-5  justify-content-center align-items-center gap-3">
               <h4 class="text-white">Connect with us</h4>
               <input
                 type="email"
@@ -39,7 +39,7 @@ const footer = () => {
       <footer className="bgprimary text-white pt-8 pb-4">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
+            <div className="col-12 col-md-6 col-sm-4 col-lg-3 mb-4">
               <h6 className="font-weight-bold">Corporate Office</h6>
               <p>
                 Merlin Oxford
@@ -54,7 +54,7 @@ const footer = () => {
                 info@merlinprojects.com
               </p>
             </div>
-            <div className="col-12 col-md-6 col-lg-2 mb-4">
+            <div className="col-12 col-md-6 col-sm-4 col-lg-2 mb-4">
               <h6 className="font-weight-bold">ABOUT</h6>
               <ul className="list-unstyled">
                 <li>MD Speak</li>
@@ -67,7 +67,7 @@ const footer = () => {
                 <li>Home Loan FAQ</li>
               </ul>
             </div>
-            <div className="col-12 col-md-6 col-lg-2 mb-4">
+            <div className="col-12 col-md-6 col-sm-4 col-lg-2 mb-4">
               <h6 className="font-weight-bold">CSR</h6>
               <ul className="list-unstyled">
                 <li>Overview</li>
@@ -81,7 +81,7 @@ const footer = () => {
               <h6>BLOG</h6>
               <h6>CAREERS</h6>
             </div>
-            <div className="col-12 col-md-6 col-lg-2 mb-4">
+            <div className="col-12 col-md-6 col-sm-4 col-lg-2 mb-4">
               <h6>NEWS & MEDIA</h6>
               <ul className="list-unstyled">
                 <li>Press Coverage</li>
@@ -114,7 +114,7 @@ const footer = () => {
             </div>
           </div>
           <div className="row  align-items-center">
-            <div className="col-12 col-md-6 text-center text-md-left ">
+            <div className="col-12 col-md-6 text-md-center text-start ">
               <p className="mb-0">Founder Member</p>
               <img
                 src="/image/creadai.png"
@@ -240,8 +240,8 @@ const footer = () => {
       </footer>
       {/* copyright */}
       <div className="container">
-        <div className="row mt-4">
-          <div className="col-md-6 text-center d-flex">
+        <div className="row mt-4 mb-2">
+          <div className="col-md-6 text-center d-flex mb-3">
             <img
               src="/image/logof.png"
               alt="CREDAI BENGAL"
@@ -249,12 +249,13 @@ const footer = () => {
               height={25}
             />
           </div>
-          <div className="col-md-6 text-center d-flex">
-            <p className="justify-content-left  mx-2">
-              © 2024 Merlin Group All rights reserved
-            </p>
-            <p className="d-inline-block  mx-2">Disclaimer |</p>
-            <p className="d-inline-block ">Sitemap</p>
+
+          <div class="col-md-6 text-md-center text-start d-flex flex-column flex-md-row align-items-start align-items-md-center">
+            <p class="mx-2 mb-2">© 2024 Merlin Group All rights reserved</p>
+            <div class="d-flex flex-column flex-md-row">
+              <p class="mx-2 mb-0">Disclaimer |</p>
+              <p class="mx-2 mb-0">Sitemap</p>
+            </div>
           </div>
         </div>
       </div>

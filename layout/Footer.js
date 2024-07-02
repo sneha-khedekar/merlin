@@ -93,7 +93,7 @@ const footer = () => {
               <h6>PRIVACY POLICY</h6>
               <h6>TERMS & CONDITIONS</h6>
             </div>
-            <div className="col-12 col-md-6 col-lg-3 mb-4">
+            <div className="col-12 col-md-6 col-sm-4 col-lg-3 mb-4">
               <h6 className="font-weight-bold">OUR PROJECTS</h6>
               <ul className="list-unstyled">
                 <li>Residential</li>
@@ -251,10 +251,12 @@ const footer = () => {
           </div>
 
           <div class="col-md-6 text-md-center text-start d-flex flex-column flex-md-row align-items-start align-items-md-center">
-            <p class="mx-2 mb-2">© 2024 Merlin Group All rights reserved</p>
+            <p>
+              © 2024 Merlin Group All rights reserved &nbsp;&nbsp;
+              <span className="d-none"> &nbsp;&nbsp;</span>
+            </p>
             <div class="d-flex flex-column flex-md-row">
-              <p class="mx-2 mb-0">Disclaimer |</p>
-              <p class="mx-2 mb-0">Sitemap</p>
+              <p>Disclaimer | Sitemap</p>
             </div>
           </div>
         </div>

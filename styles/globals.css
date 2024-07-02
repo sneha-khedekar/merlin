@@ -124,6 +124,13 @@ button {
     height: unset !important;
 }
 
+img {
+    position: unset !important;
+    height: auto !important;
+    width: auto !important;
+    inset: 0px;
+}
+
 /* Utility classes */
 .text-center {
     text-align: center;

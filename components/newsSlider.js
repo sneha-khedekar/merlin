@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const SwiperSlider = ({ articles }) => {
+const NewsSlider = ({ articles }) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -46,4 +46,4 @@ const SwiperSlider = ({ articles }) => {
   );
 };
 
-export default SwiperSlider;
+export default NewsSlider;

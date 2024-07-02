@@ -1,7 +1,6 @@
 // components/NewsComponent.js
 import React from "react";
-import SwiperSlider from "../components/swiperSlider";
-
+import NewsSlider from "./newsSlider";
 const NewsComponent = () => {
   const articleData = [
     {
@@ -28,7 +27,7 @@ const NewsComponent = () => {
     <section className="news-section py-4">
       <div className="container mt-4">
         <h2 className="text-center heading">News & Media</h2>
-        <SwiperSlider articles={articleData} />
+        <NewsSlider articles={articleData} />
       </div>
     </section>
   );

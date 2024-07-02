@@ -194,7 +194,14 @@ const NavigationBar = () => {
           </nav>
           <div className="mb-5 mt-5">
             <p className="text-white mb-0">Founder Member</p>
-            <img src="/image/creadai.png" alt="CREDAI BENGAL" className="" />
+            <span className="image-container">
+              <Image
+                layout="fill"
+                src="/image/creadai.png"
+                alt="CREDAI BENGAL"
+                className=""
+              />
+            </span>
           </div>
           <div className="folllow-us">
             <p className=" text-white mb-0">Follow us on </p>

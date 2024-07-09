@@ -12,7 +12,11 @@
     --font-poppins: 'poppins', sans-serif;
     --font-size: calc(14px + 0.25vw) !important;
     --swiper-navigation-size: 22px !important;
-
+    --primary-blue:#004D9E!important;
+    --primary-green:#30935D!important;
+    --primary-yellow:#FC9300!important;
+    --primary-red:#E01A4F!important;
+    --primary-gray:#E5E5E5!important;
 
 }
 
@@ -30,13 +34,14 @@
 
 /* Basic typography */
 body {
-    font-family: var(--font-poppins);
+    font-family: var(--font-poppins)!important;
     font-size: var(--font-size) !important;
     --spacing-unit: 1rem;
     line-height: 1.5;
     --background-color: #f5f5f5;
     --text-color: #333;
     font-weight: 300 !important;
+    
 }
 
 
@@ -94,10 +99,12 @@ button {
     margin: 0.5em 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+   
 }
 
 button {
-    color: #fff !important;
+    color: var(--primary-blue)!important;
     border: none;
     cursor: pointer;
 }
@@ -457,6 +464,7 @@ span.swiper-pagination-bullet {
 
 .card {
     overflow: hidden;
+    background-color: transparent!important;
 }
 
 .addtolife-overlay {
@@ -642,45 +650,31 @@ span.swiper-pagination-bullet {
 
 /* .....Footer........ */
 
-/* connect with us */
-
-.connect-with-us {
-    margin-bottom: -3.3rem;
-    background-color: #5A5A5A;
+/* Enquiry Form */
+.enquire-now {
+    background-color: var(--primary-blue);
 }
 
-.connect-with-us .form-control {
-    width: 30% !important;
+.enquire-now h2 {
+    font-size: calc(1rem + 1.5vw);
+    font-weight: 300;
 }
-
-.connect-with-us input {
-    background-color: #5A5A5A !important;
-    color: white !important;
-    border: 1px solid white !important;
-}
-
-.connect-with-us input::placeholder {
-    color: white !important;
-}
-
-.connect-with-us h4 {
-    font-size: 25px;
-}
-
-.connect-with-us {
-    display: flex !important;
-    padding: 2rem;
-}
-
 footer h6 {
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 600;
+    color: var(--primary-blue);
 }
 
 footer p {
     font-size: 15px;
+    color: var(--primary-blue);
 }
-
+footer li a {
+    text-transform:uppercase;
+    color: var(--primary-blue);
+    font-weight:600;
+    border-bottom: 2px solid var(--primary-blue)
+}
 
 
 /* .....Footer End........ */

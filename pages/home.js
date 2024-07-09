@@ -1,18 +1,19 @@
 import React from "react";
-import Blog from "@/container/blog";
-import News from "@/container/news";
-import Testimonials from "@/container/testimonial";
+import HeroSlider from "@/container/Home/heroSlider";
+import Blog from "@/container/Home/blog";
+import News from "@/container/Home/news";
+import Testimonials from "@/container/Home/testimonial";
 import Button from "@/components/button";
-import HeroSlider from "@/components/heroSlider";
-import RealEstateUsp from "@/container/skyline";
-import AddMoreToLife from "@/container/AddMoreToLife";
-import FeatureProject from "@/components/featureProject";
-// import FeatureProjectSlider from "@/container/featureProjectSlider";
+import RealEstateUsp from "@/container/Home/skyline";
+import AddMoreToLife from "@/container/Home/AddMoreToLife";
+import FeatureProject from "@/container/Home/featureProject";
+import FounderDesk from "@/container/Home/FounderDesk";
 const home = () => {
   return (
     <>
       <HeroSlider />
       <AddMoreToLife />
+
       <div className="bgsecondary">
         <div className="container">
           <div className="row">
@@ -24,6 +25,7 @@ const home = () => {
           </div>
         </div>
       </div>
+      <FounderDesk />
       <RealEstateUsp />
       <FeatureProject />
 
@@ -52,7 +54,7 @@ const home = () => {
       </div>
 
       <Testimonials />
-      <News />
+
       <Blog />
     </>
   );

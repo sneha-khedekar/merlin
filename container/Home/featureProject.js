@@ -1,4 +1,4 @@
-import FeatureProjectSlider from "@/container/featureProjectSlider";
+import FeatureProjectSlider from "@/container/Home/featureProjectSlider";
 import React from "react";
 
 const FeatureProject = () => {

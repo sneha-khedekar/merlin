@@ -1,6 +1,6 @@
 // pages/news.js
-import React from 'react';
-import NewsComponent from '../components/newsComponent';
+import React from "react";
+import NewsComponent from "../../components/newsComponent";
 
 const News = () => {
   return (

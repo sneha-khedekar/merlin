@@ -10,7 +10,7 @@
 :root {
     --primary-color: #004D9E !important;
     --font-poppins: 'poppins', sans-serif;
-    --font-size: calc(16px + 0.25vw);
+    --font-size: calc(14px + 0.25vw) !important;
     --swiper-navigation-size: 22px !important;
 
 
@@ -31,7 +31,7 @@
 /* Basic typography */
 body {
     font-family: var(--font-poppins);
-    font-size: var(--font-size);
+    font-size: var(--font-size) !important;
     --spacing-unit: 1rem;
     line-height: 1.5;
     --background-color: #f5f5f5;
@@ -265,6 +265,7 @@ img {
     color: var(--primary-color);
     margin-bottom: var(--spacing-unit);
     font-weight: 300;
+    text-transform: capitalize;
 }
 
 .subheading {
@@ -290,11 +291,17 @@ button.btn.explore-btn {
 }
 
 button.story-button {
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 6rem;
     font-size: calc(0.8rem + 0.5vw);
     background-color: var(--primary-color);
     text-transform: uppercase;
     font-weight: 300;
+}
+
+button.story-button:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 /* button end  */
@@ -338,14 +345,49 @@ span.swiper-pagination-bullet {
     background-color: #24669aa3 !important;
 }
 
+.offcanvas-header {
+    padding-top: 2rem !important;
+    padding-left: 3rem !important;
+    font-weight: 500;
+}
+
+.offcanvas-header:hover {
+    color: var(--primary-color);
+}
+
 .offcanvas-body {
-    padding: 4rem !important;
+    padding: 2.5rem !important;
 }
 
 .offcanvas-body a {
     font-weight: 400 !important;
 }
 
+.offcanvas a:hover {
+    color: var(--primary-color) !important;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.close-btn .hover-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.close-btn:hover .default-icon {
+    display: none;
+}
+
+.close-btn:hover .hover-icon {
+    display: block;
+}
 
 /* slidebar end */
 /* ...Nav bar... end */
@@ -423,7 +465,7 @@ span.swiper-pagination-bullet {
     width: 100%;
     padding: 20px 0;
     text-transform: uppercase;
-    font-size: calc(1rem + 0.2vw);
+    font-size: calc(1.2rem + 0.2vw);
     font-weight: 400;
     color: #fff;
     z-index: 1;
@@ -583,6 +625,21 @@ span.swiper-pagination-bullet {
 
 /* featureproject-slider end */
 
+/* founder desk */
+
+.primaryline {
+    width: 6%;
+}
+
+.founderdesk p {
+    font-size: 1.9rem;
+}
+
+/* founder desk end */
+
+
+
+
 /* .....Footer........ */
 
 /* connect with us */
@@ -628,7 +685,31 @@ footer p {
 
 /* .....Footer End........ */
 
+/* -----SCROLL TO TOP---- */
+.scrollToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
 
+.scroll-btn {
+    background-color: #fff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* ------SCROLL TO TOP END */
 
 
 
@@ -721,7 +802,7 @@ footer p {
 
     .offcanvas {
         color: #ffffff !important;
-        background-color: #24669ae8 !important;
+        background-color: #323233 !important;
     }
 
     .news-section p {

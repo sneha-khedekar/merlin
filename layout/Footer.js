@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../components/button";
-
+import ScrollToTop from "@/container/Home/ScrollToTop";
 const footer = () => {
   return (
     <>
@@ -261,6 +261,7 @@ const footer = () => {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </>
   );
 };

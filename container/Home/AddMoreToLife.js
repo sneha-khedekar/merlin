@@ -5,16 +5,23 @@ import Image from "next/image";
 const AddMoreToLife = () => {
   return (
     <>
-      <div className="addmorelife-text">
+      <div className="addmorelife-text ">
         <div className="container">
-          <div className="text-center">
-            <h2 className="heading">Add more to life</h2>
-            <p className="text-muted mt-4">
-              We believe there is more to life than expectations. We believe
-              there is more to life than <br />
-              compromises. We believe there is more to life than boundaries. We
-              believe in adding more to life, every day.
-            </p>
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="text-center">
+                <h2 className="heading">Add more to life</h2>
+                <p className="text-muted mt-4">
+                  At Merlin, not only do we look to the future, but enable our
+                  stakeholders, partners and customers to do so as well. The
+                  future is about evolution. More success, more satisfaction,
+                  more joy.
+                </p>
+                <p className="text-muted">
+                  We believe in adding more to life, every day.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

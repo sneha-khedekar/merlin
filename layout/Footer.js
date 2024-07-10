@@ -4,8 +4,10 @@ import ScrollToTop from "@/container/Home/ScrollToTop";
 const footer = () => {
   return (
     <>
-    
 
+      <div className="enquiryButton">
+        <button>Enquiry</button>
+      </div>
       <div className="enquire-now text-light p-4">
         <h2 className="text-center mb-4">Enquire Now</h2>
         <div className="container">

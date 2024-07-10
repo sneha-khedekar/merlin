@@ -2,7 +2,6 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import NavigationBar from "@/layout/Header";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -34,7 +33,6 @@ export default function HeroSlider() {
 
   return (
     <>
-      <NavigationBar />
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

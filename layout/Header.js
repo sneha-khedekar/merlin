@@ -1,36 +1,36 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Navbar, Nav, Container, Offcanvas, Button } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import styles from "./Navigation.module.css";
-const StickyNavbar = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector(`.${styles.navbar}`);
-      if (window.scrollY > 0) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-};
 const NavigationBar = () => {
-  const [show, setShow] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+    const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  return (
-    <div className={styles.navbarWrapper}>
-      <Container>
-        <Navbar expand="lg" className={`navbar ${styles.navbar}`}>
-          <Navbar.Brand href="/" className="ml-auto">
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    return (
+        <div className={`${styles.navbarWrapper} ${isSticky ? styles.sticky : ""}`}>
+            <Container>
+                <Navbar expand="lg" className={`navbar ${styles.navbar}`}>
+                    <Navbar.Brand href="/" className="ml-auto">
+
             <span className="image-container">
               <Image
                 layout="fill"

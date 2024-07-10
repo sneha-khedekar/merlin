@@ -8,9 +8,12 @@ import RealEstateUsp from "@/container/Home/skyline";
 import AddMoreToLife from "@/container/Home/AddMoreToLife";
 import FeatureProject from "@/container/Home/featureProject";
 import FounderDesk from "@/container/Home/FounderDesk";
+import NavigationBar from "@/layout/Header";
+
 const home = () => {
   return (
     <>
+      <NavigationBar />
       <HeroSlider />
       <AddMoreToLife />
 

@@ -20,6 +20,25 @@
 
 }
 
+/* styles/globals.css */
+/* Add your custom scrollbar styles here */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .text-primary {
     color: var(--primary-color) !important;
 }
@@ -659,6 +678,31 @@ span.swiper-pagination-bullet {
     font-size: calc(1rem + 1.5vw);
     font-weight: 300;
 }
+.enquiryButton {
+    position: fixed;
+    bottom: 20%; 
+    right: 3vh;
+    transform-origin: center right;
+    transform: translateY(-50%) rotate(-90deg); /* Rotate the button */
+    z-index: 1000;
+}
+
+.enquiryButton button {
+    background-color: var(--primary-red);
+    color: white!important;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.enquiryButton button:hover {
+    background-color: #0056b3; /* Example hover color */
+}
+
+
+
 footer h6 {
     font-size: 1.3rem;
     font-weight: 600;
